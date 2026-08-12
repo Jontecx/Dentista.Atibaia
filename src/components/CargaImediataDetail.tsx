@@ -22,7 +22,7 @@ export const CargaImediataDetail: React.FC = () => {
             Como Funciona o <span className="text-[#C6A664]">Protocolo de Carga Imediata</span>?
           </h2>
           <p className="text-base sm:text-lg text-[#334155] leading-relaxed font-barlow">
-            Uma abordagem cirúrgica moderna e eficiente que substitui a dentadura móvel por uma ponte fixa definitiva apoiada em apenas 4 implantes de titânio de alta precisão.
+            Uma abordagem cirúrgica moderna e eficiente que substitui a dentadura móvel por uma ponte fixa apoiada em apenas 4 implantes de titânio de alta precisão.
           </p>
         </div>
 

@@ -58,9 +58,9 @@ export const CARGA_IMEDIATA_STEPS: StepProtocol[] = [
   },
   {
     step: 4,
-    title: 'Acompanhamento & Instalação Definitiva',
-    description: 'Após a osteointegratação completa, ajustamos os detalhes estéticos finais da prótese definitiva em cerâmica para garantir brilho, textura e mastigação perfeita.',
-    highlight: 'Segurança e durabilidade vitalícia',
+    title: 'Acompanhamento & Instalação Final',
+    description: 'Após a osteointegratação completa, ajustamos os detalhes estéticos finais da prótese em cerâmica para garantir brilho, textura e mastigação perfeita.',
+    highlight: 'Segurança e alta durabilidade',
     duration: 'Acompanhamento contínuo',
   },
 ];

@@ -1,6 +1,7 @@
 import React from 'react';
 import { CLINIC_INFO } from '../data/clinicData';
 import { MapPin, Phone, Clock, MessageCircle, ShieldCheck, Navigation, Car } from 'lucide-react';
+import { LogoImage } from './LogoImage';
 
 export const LocationAndFooter: React.FC = () => {
   const mapEmbedUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3667.6587428198765!2d-46.55403242381206!3d-23.118678244498305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cec10b9f515e07%3A0x8e874df09d66dbec!2sAv.%20Brig.%20Jos%C3%A9%20Vicente%20Faria%20Lima%2C%2038%20-%20Centro%2C%20Atibaia%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1710000000000!5m2!1spt-BR!2sbr";
@@ -14,8 +15,8 @@ export const LocationAndFooter: React.FC = () => {
           <div className="lg:col-span-5 space-y-6">
             <div className="space-y-2">
               <div className="flex items-center gap-3">
-                <div className="w-11 h-11 rounded-full bg-gradient-to-br from-[#0E2954] to-[#0A1C38] border border-[#C6A664] text-[#C6A664] font-poppins font-extrabold text-sm flex items-center justify-center tracking-tighter shadow-md">
-                  LB
+                <div className="relative flex items-center justify-center">
+                  <LogoImage variant="footer" className="h-11 w-auto object-contain max-w-[180px] brightness-0 invert" />
                 </div>
                 <div>
                   <h3 className="font-poppins font-bold text-2xl text-white tracking-tight">
