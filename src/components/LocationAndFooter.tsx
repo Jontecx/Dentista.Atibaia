@@ -16,7 +16,7 @@ export const LocationAndFooter: React.FC = () => {
             <div className="space-y-2">
               <div className="flex items-center gap-3">
                 <div className="relative flex items-center justify-center">
-                  <LogoImage variant="footer" className="h-11 w-auto object-contain max-w-[180px] brightness-0 invert" />
+                  <LogoImage variant="footer" className="h-11 w-auto object-contain max-w-[180px]" />
                 </div>
                 <div>
                   <h3 className="font-poppins font-bold text-2xl text-white tracking-tight">
