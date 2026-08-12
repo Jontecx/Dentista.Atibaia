@@ -71,28 +71,6 @@ export const FaqSection: React.FC = () => {
             );
           })}
         </div>
-
-        {/* Still Have Questions Box */}
-        <div className="mt-12 text-center bg-white p-8 rounded-3xl border border-slate-200 shadow-xs space-y-4">
-          <h3 className="font-poppins font-bold text-xl text-[#0E2954]">
-            Não encontrou a resposta para a sua dúvida?
-          </h3>
-          <p className="text-xs sm:text-sm text-[#334155] max-w-lg mx-auto font-barlow">
-            Nossa equipe de atendimento no WhatsApp está à disposição para esclarecer qualquer aspecto técnico ou agendar seu horário com o Dr. Lucas e Dra. Bruna.
-          </p>
-
-          <a
-            href={`${CLINIC_INFO.whatsappUrl}?text=${encodeURIComponent(
-              'Olá! Tenho uma dúvida específica e gostaria de falar com a equipe de atendimento da Lubru Odontologia.'
-            )}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex bg-[#0E2954] hover:bg-[#143264] text-white font-bold text-xs uppercase tracking-wider px-7 py-3.5 rounded-full shadow-md transition-all items-center gap-2 border border-[#C6A664]/30 font-poppins"
-          >
-            <MessageCircle className="w-4 h-4 text-[#C6A664]" />
-            <span>Falar Diretamente com a Equipe no WhatsApp</span>
-          </a>
-        </div>
       </div>
     </section>
   );

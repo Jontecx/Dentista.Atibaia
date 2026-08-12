@@ -26,11 +26,11 @@ export const DOCTORS: Doctor[] = [
   },
   {
     name: 'Dra. Bruna Soares Diodatti Pracchia',
-    cro: 'CRO 139.987',
+    cro: 'CROSP 139.987',
     role: 'Especialista em Estética Dental, Ortodontia & Harmonização do Sorriso',
     specialties: ['Lentes de Contato Dentais', 'Alinhadores Invisíveis', 'Odontologia Preventiva e Integrativa'],
     bio: 'Pioneira em Odontologia Estética com visão integrativa. Focada no alinhamento discreto, facetas cerâmicas de acabamento natural e na preservação da saúde sistêmica a partir de um diagnóstico bucal minucioso.',
-    image: 'https://images.unsplash.com/photo-1594824813566-78a9c3d4f40f?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=800&q=80',
   },
 ];
 

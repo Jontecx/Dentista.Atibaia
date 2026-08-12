@@ -1,40 +1,44 @@
 import React from 'react';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
-import { CargaImediataDetail } from './components/CargaImediataDetail';
 import { TrustSignals } from './components/TrustSignals';
 import { ServicesSection } from './components/ServicesSection';
+import { CargaImediataDetail } from './components/CargaImediataDetail';
 import { DifferentialsSection } from './components/DifferentialsSection';
 import { FaqSection } from './components/FaqSection';
+import { TestimonialsSection } from './components/TestimonialsSection';
 import { LocationAndFooter } from './components/LocationAndFooter';
 import { FloatingWhatsApp } from './components/FloatingWhatsApp';
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-[#F5F2ED] font-roboto text-[#2D2D2D] selection:bg-[#9D81BA] selection:text-white">
+    <div className="min-h-screen bg-[#F4F7FA] font-roboto text-[#334155] selection:bg-[#0E2954] selection:text-[#C6A664]">
       {/* Header Navigation */}
       <Header />
 
       <main>
-        {/* Hero Section */}
+        {/* 1. Hero Section (Primeira Dobra) */}
         <Hero />
 
-        {/* Carga Imediata All-on-4 Protocol Breakdown */}
+        {/* 2. Carga Imediata Protocol Breakdown (Segunda Dobra) */}
         <CargaImediataDetail />
 
-        {/* Trust Signals, Doctors & Google Reviews */}
+        {/* 3. Apresentação dos Médicos Especialistas */}
         <TrustSignals />
 
-        {/* Services & Benefits */}
+        {/* 4. Tratamentos de Excelência (Serviços) */}
         <ServicesSection />
 
-        {/* Differentials */}
+        {/* 5. Diferenciais */}
         <DifferentialsSection />
 
-        {/* Frequently Asked Questions */}
+        {/* 6. Perguntas Frequentes */}
         <FaqSection />
 
-        {/* Map, Location & Footer */}
+        {/* 7. Depoimentos dos Pacientes & Dúvidas */}
+        <TestimonialsSection />
+
+        {/* 8. Mapa, Localização & Rodapé */}
         <LocationAndFooter />
       </main>
 
@@ -43,3 +47,4 @@ export default function App() {
     </div>
   );
 }
+

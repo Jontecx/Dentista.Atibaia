@@ -27,7 +27,7 @@ export const CargaImediataDetail: React.FC = () => {
         </div>
 
         {/* 4 Steps Interactive Navigation */}
-        <div className="grid lg:grid-cols-12 gap-8 items-start mb-16">
+        <div className="grid lg:grid-cols-12 gap-8 items-start">
           {/* Steps List Column */}
           <div className="lg:col-span-5 space-y-3">
             {CARGA_IMEDIATA_STEPS.map((step, idx) => {
@@ -139,52 +139,6 @@ export const CargaImediataDetail: React.FC = () => {
               >
                 <MessageCircle className="w-4 h-4 text-[#C6A664]" />
                 <span>Consultar meu Caso no WhatsApp</span>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        {/* Comparison Key Benefits Box - Deep Navy background with Gold accents */}
-        <div className="bg-[#0E2954] text-white rounded-3xl p-8 sm:p-10 shadow-xl relative overflow-hidden border border-[#C6A664]/30">
-          <div className="absolute top-0 right-0 w-80 h-80 bg-[#C6A664]/10 rounded-full blur-3xl pointer-events-none" />
-
-          <div className="grid lg:grid-cols-12 gap-8 items-center relative z-10">
-            <div className="lg:col-span-8 space-y-4">
-              <span className="text-xs font-bold text-[#C6A664] tracking-wider uppercase bg-white/10 px-3.5 py-1 rounded-full border border-white/10">
-                Por que escolher o Protocolo de 4 Pinos?
-              </span>
-              <h3 className="font-poppins font-bold text-2xl sm:text-3xl text-white">
-                Liberdade para sorrir, falar e comer o que você quiser.
-              </h3>
-              <p className="text-slate-200 text-sm sm:text-base leading-relaxed font-barlow">
-                As próteses convencionais (dentaduras) causam lesões gengivais, perdem a retenção com o passar dos anos e afetam severamente a autoestima. O Protocolo de Carga Imediata recupera a força mastigatória de um dente natural com estabilidade absoluta.
-              </p>
-
-              <div className="grid sm:grid-cols-3 gap-4 pt-2">
-                <div className="bg-white/10 backdrop-blur-md p-3.5 rounded-xl border border-white/10">
-                  <span className="text-[#C6A664] font-bold text-xl block">98%+</span>
-                  <span className="text-xs text-slate-200">Taxa de Sucesso Clínico</span>
-                </div>
-                <div className="bg-white/10 backdrop-blur-md p-3.5 rounded-xl border border-white/10">
-                  <span className="text-[#C6A664] font-bold text-xl block">1 Única</span>
-                  <span className="text-xs text-slate-200">Cirurgia de Fixação</span>
-                </div>
-                <div className="bg-white/10 backdrop-blur-md p-3.5 rounded-xl border border-white/10">
-                  <span className="text-[#C6A664] font-bold text-xl block">Sem Enxerto</span>
-                  <span className="text-xs text-slate-200">Na maioria dos casos</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="lg:col-span-4 text-center lg:text-right">
-              <a
-                href={whatsappStepUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex bg-[#C6A664] hover:bg-[#B59553] text-[#0A1C38] font-poppins font-bold text-xs uppercase tracking-wider px-7 py-4 rounded-full shadow-lg hover:scale-105 transition-all items-center gap-2"
-              >
-                <MessageCircle className="w-5 h-5 text-[#0A1C38]" />
-                <span>Agendar Avaliação no WhatsApp</span>
               </a>
             </div>
           </div>
