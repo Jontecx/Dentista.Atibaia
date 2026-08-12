@@ -1,0 +1,6 @@
+{
+  "name": "Lubru Odontologia",
+  "description": "Landing page de alta conversão para Lubru Odontologia em Atibaia/SP - Carga Imediata, Lentes e Estética Dental de Luxo.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

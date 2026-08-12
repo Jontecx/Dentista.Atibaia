@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@theme {
+  --font-poppins: 'Poppins', sans-serif;
+  --font-arimo: 'Arimo', sans-serif;
+  --font-barlow: 'Barlow', sans-serif;
+
+  --color-navy-dark: #0A1C38;
+  --color-navy-main: #0E2954;
+  --color-navy-medium: #143264;
+  --color-navy-light: #1D437F;
+  --color-navy-soft: #EEF3FA;
+
+  --color-gold-main: #C6A664;
+  --color-gold-hover: #B59553;
+  --color-gold-light: #DFCA98;
+  --color-gold-soft: #FAF6EE;
+
+  --color-canvas-bg: #F4F7FA;
+  --color-canvas-card: #FFFFFF;
+  --color-canvas-border: #E2E8F0;
+}
+
+@layer utilities {
+  .font-poppins {
+    font-family: 'Poppins', sans-serif;
+  }
+  .font-arimo {
+    font-family: 'Arimo', sans-serif;
+  }
+  .font-barlow {
+    font-family: 'Barlow', sans-serif;
+  }
+  .glass-card {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+  .glass-card-dark {
+    background: rgba(14, 41, 84, 0.95);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+}
+
+/* Custom scrollbar Brand Colors */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F4F7FA;
+}
+::-webkit-scrollbar-thumb {
+  background: #C6A664;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #0E2954;
+}
