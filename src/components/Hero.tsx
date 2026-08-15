@@ -46,7 +46,7 @@ export const Hero: React.FC<HeroProps> = () => {
 
           <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-bold bg-[#EEF3FA] text-[#0E2954] border border-[#0E2954]/30 shadow-xs font-arimo">
             <Clock className="w-3.5 h-3.5 text-[#C6A664]" />
-            Dentes Fixos em 24 horas &bull; Conheça o Protocolo de Carga Imediata
+            Cirurgia Guiada 3D &bull; Implantes Sem Enxerto
           </span>
         </div>
 
@@ -55,11 +55,8 @@ export const Hero: React.FC<HeroProps> = () => {
           <div className="lg:col-span-7 text-center lg:text-left space-y-6">
             {/* Main Headline */}
             <h1 className="font-poppins font-bold text-3xl sm:text-4xl lg:text-5xl text-[#0E2954] tracking-tight leading-[1.18]">
-              Recupere seu Sorriso e sua Confiança em Tempo Recorde com o{' '}
-              <span className="relative inline-block text-[#C6A664]">
-                Protocolo de Carga Imediata.
-                <span className="absolute bottom-1 left-0 w-full h-2 bg-[#C6A664]/20 -z-10 rounded-sm" />
-              </span>
+              Dentes Fixos em 24 horas. Conheça o{' '}
+              <span className="text-[#C6A664]">Protocolo de Carga Imediata</span>
             </h1>
 
             {/* Subtitle */}
