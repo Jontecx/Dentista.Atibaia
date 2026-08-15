@@ -32,7 +32,7 @@ export const DifferentialsSection: React.FC = () => {
           <h2 className="font-poppins font-bold text-3xl sm:text-4xl text-[#0E2954] tracking-tight">
             Diferenciais de um <span className="text-[#C6A664]">Atendimento Exclusivo e Humano</span>
           </h2>
-          <p className="text-base sm:text-lg text-[#334155] font-barlow">
+          <p className="text-base sm:text-lg text-[#334155] font-arimo">
             Proporcionamos uma experiência odontológica sem estresse, pautada em respeito ao seu tempo, alta tecnologia e suporte completo.
           </p>
         </div>
@@ -61,17 +61,17 @@ export const DifferentialsSection: React.FC = () => {
                   <h3 className="font-poppins font-bold text-xl text-[#0E2954] group-hover:text-[#C6A664] transition-colors">
                     {diff.title}
                   </h3>
-                  <p className="text-xs font-semibold text-[#C6A664] uppercase tracking-wider mt-0.5 font-barlow">
+                  <p className="text-xs font-semibold text-[#C6A664] uppercase tracking-wider mt-0.5 font-arimo">
                     {diff.subtitle}
                   </p>
                 </div>
 
-                <p className="text-xs sm:text-sm text-[#334155] leading-relaxed font-barlow">
+                <p className="text-xs sm:text-sm text-[#334155] leading-relaxed font-arimo">
                   {diff.description}
                 </p>
               </div>
 
-              <div className="pt-2 flex items-center gap-1.5 text-xs font-medium text-[#1E293B]">
+              <div className="pt-2 flex items-center gap-1.5 text-xs font-medium text-[#1E293B] font-arimo">
                 <CheckCircle2 className="w-4 h-4 text-[#C6A664]" />
                 <span>Padrão Lubru em Atibaia</span>
               </div>
@@ -91,7 +91,7 @@ export const DifferentialsSection: React.FC = () => {
                 Vocês atendem convênios?
               </h3>
 
-              <p className="text-xs text-slate-200 leading-relaxed font-barlow">
+              <p className="text-xs text-slate-200 leading-relaxed font-arimo">
                 Não aceitamos convênios odontológicos, porém disponibilizamos toda a documentação necessária para que você possa solicitar o reembolso à sua operadora. Confira as condições contratuais do seu plano de saúde e agende sua consulta conosco.
               </p>
             </div>

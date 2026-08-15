@@ -18,10 +18,11 @@ export const CargaImediataDetail: React.FC = () => {
             <Sparkles className="w-3.5 h-3.5 text-[#C6A664]" />
             Especialidade Principal &bull; Lubru Odontologia
           </span>
-          <h2 className="font-poppins font-bold text-3xl sm:text-4xl text-[#0E2954] tracking-tight">
-            Como Funciona o <span className="text-[#C6A664]">Protocolo de Carga Imediata</span>?
+          <h2 className="font-poppins font-bold text-3xl sm:text-4xl text-[#0E2954] tracking-tight leading-tight">
+            Como Funciona o <br className="hidden sm:inline" />
+            <span className="text-[#C6A664] block sm:inline">Protocolo de Carga Imediata?</span>
           </h2>
-          <p className="text-base sm:text-lg text-[#334155] leading-relaxed font-barlow">
+          <p className="text-base sm:text-lg text-[#334155] leading-relaxed font-arimo">
             Uma abordagem cirúrgica moderna e eficiente que substitui a dentadura móvel por uma ponte fixa apoiada em apenas 4 implantes de titânio de alta precisão.
           </p>
         </div>
@@ -59,11 +60,11 @@ export const CargaImediataDetail: React.FC = () => {
                       >
                         {step.title}
                       </h3>
-                      <span className="text-[11px] font-medium px-2.5 py-0.5 rounded-full bg-[#F4F7FA] text-[#64748B] border border-slate-200">
+                      <span className="text-[11px] font-medium px-2.5 py-0.5 rounded-full bg-[#F4F7FA] text-[#64748B] border border-slate-200 font-arimo">
                         {step.duration}
                       </span>
                     </div>
-                    <p className="text-xs text-[#64748B] line-clamp-2 leading-relaxed font-barlow">
+                    <p className="text-xs text-[#64748B] line-clamp-2 leading-relaxed font-arimo">
                       {step.description}
                     </p>
                   </div>
@@ -79,10 +80,10 @@ export const CargaImediataDetail: React.FC = () => {
           {/* Step Detail Active Card Column */}
           <div className="lg:col-span-7 bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-sm relative space-y-6">
             <div className="flex items-center justify-between border-b border-slate-200 pb-4">
-              <span className="text-xs font-bold text-[#0E2954] bg-[#EEF3FA] px-3 py-1 rounded-full border border-[#0E2954]/20 uppercase tracking-wider">
+              <span className="text-xs font-bold text-[#0E2954] bg-[#EEF3FA] px-3 py-1 rounded-full border border-[#0E2954]/20 uppercase tracking-wider font-arimo">
                 ETAPA 0{CARGA_IMEDIATA_STEPS[activeStep].step} DE 04
               </span>
-              <span className="text-xs font-medium text-[#64748B] flex items-center gap-1">
+              <span className="text-xs font-medium text-[#64748B] flex items-center gap-1 font-arimo">
                 <Clock className="w-3.5 h-3.5 text-[#C6A664]" />
                 {CARGA_IMEDIATA_STEPS[activeStep].duration}
               </span>
@@ -92,7 +93,7 @@ export const CargaImediataDetail: React.FC = () => {
               <h3 className="font-poppins font-bold text-2xl text-[#0E2954]">
                 {CARGA_IMEDIATA_STEPS[activeStep].title}
               </h3>
-              <p className="text-base text-[#334155] leading-relaxed font-barlow">
+              <p className="text-base text-[#334155] leading-relaxed font-arimo">
                 {CARGA_IMEDIATA_STEPS[activeStep].description}
               </p>
             </div>
@@ -103,7 +104,7 @@ export const CargaImediataDetail: React.FC = () => {
                 <CheckCircle className="w-5 h-5 text-[#C6A664]" />
               </div>
               <div>
-                <span className="text-xs text-[#64748B] uppercase font-semibold block">Diferencial do Passo</span>
+                <span className="text-xs text-[#64748B] uppercase font-semibold block font-arimo">Diferencial do Passo</span>
                 <span className="font-poppins font-bold text-sm text-[#0E2954]">
                   {CARGA_IMEDIATA_STEPS[activeStep].highlight}
                 </span>
@@ -111,7 +112,7 @@ export const CargaImediataDetail: React.FC = () => {
             </div>
 
             {/* Quick Benefits Grid */}
-            <div className="grid sm:grid-cols-2 gap-3 pt-2">
+            <div className="grid sm:grid-cols-2 gap-3 pt-2 font-arimo">
               <div className="flex items-center gap-2 text-xs font-medium text-[#1E293B]">
                 <ShieldCheck className="w-4 h-4 text-[#C6A664]" /> Planejamento cirúrgico virtual 3D
               </div>
@@ -128,14 +129,14 @@ export const CargaImediataDetail: React.FC = () => {
 
             {/* CTA inside active card */}
             <div className="pt-4 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4">
-              <div className="text-xs text-[#64748B]">
+              <div className="text-xs text-[#64748B] font-arimo">
                 Deseja entender se seu caso se enquadra?
               </div>
               <a
                 href={whatsappStepUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto bg-[#0E2954] hover:bg-[#143264] text-white font-bold text-xs uppercase tracking-wider px-5 py-3 rounded-full shadow-md transition-all flex items-center justify-center gap-2 border border-[#C6A664]/30"
+                className="w-full sm:w-auto bg-[#0E2954] hover:bg-[#143264] text-white font-bold text-xs uppercase tracking-wider px-5 py-3 rounded-full shadow-md transition-all flex items-center justify-center gap-2 border border-[#C6A664]/30 font-poppins"
               >
                 <MessageCircle className="w-4 h-4 text-[#C6A664]" />
                 <span>Consultar meu Caso no WhatsApp</span>

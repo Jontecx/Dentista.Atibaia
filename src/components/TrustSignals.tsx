@@ -1,6 +1,55 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { DOCTORS, CLINIC_INFO } from '../data/clinicData';
 import { Star, Award } from 'lucide-react';
+import { Doctor } from '../types';
+
+const DOCTOR_LOCAL_PATHS: Record<string, string[]> = {
+  'CROSP 141.155': [
+    '/doutor-lucas.avif',
+    '/doutor-lucas.AVIF',
+    '/dr-lucas.avif',
+    '/dr-lucas.AVIF',
+    '/doutor-lucas.webp',
+    '/dr-lucas.webp',
+    '/doutor-lucas.png',
+    '/dr-lucas.png',
+    '/doutor-lucas.jpg',
+    '/dr-lucas.jpg',
+  ],
+  'CROSP 139.987': [
+    '/doutora-bruna.avif',
+    '/doutora-bruna.AVIF',
+    '/dra-bruna.avif',
+    '/dra-bruna.AVIF',
+    '/doutora-bruna.webp',
+    '/dra-bruna.webp',
+    '/doutora-bruna.png',
+    '/dra-bruna.png',
+    '/doutora-bruna.jpg',
+    '/dra-bruna.jpg',
+  ],
+};
+
+const DoctorAvatar: React.FC<{ doctor: Doctor }> = ({ doctor }) => {
+  const customPaths = DOCTOR_LOCAL_PATHS[doctor.cro] || [];
+  const allPaths = [...customPaths, doctor.image];
+  const [index, setIndex] = useState(0);
+
+  const handleError = () => {
+    if (index < allPaths.length - 1) {
+      setIndex((prev) => prev + 1);
+    }
+  };
+
+  return (
+    <img
+      src={allPaths[index]}
+      alt={doctor.name}
+      className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+      onError={handleError}
+    />
+  );
+};
 
 export const TrustSignals: React.FC = () => {
   return (
@@ -15,7 +64,7 @@ export const TrustSignals: React.FC = () => {
           <h2 className="font-poppins font-bold text-3xl sm:text-4xl text-[#0E2954] tracking-tight">
             Especialistas Dedicados à <span className="text-[#C6A664]">Sua Transformação</span>
           </h2>
-          <p className="text-base sm:text-lg text-[#334155] font-barlow">
+          <p className="text-base sm:text-lg text-[#334155] font-arimo">
             Atendimento ético, altamente qualificado e alinhado com as normas do Conselho Regional de Odontologia e ANVISA.
           </p>
         </div>
@@ -29,28 +78,24 @@ export const TrustSignals: React.FC = () => {
             >
               {/* Doctor Avatar Image */}
               <div className="relative w-36 h-44 sm:w-40 sm:h-48 rounded-2xl overflow-hidden shrink-0 shadow-md border-2 border-slate-100">
-                <img
-                  src={doctor.image}
-                  alt={doctor.name}
-                  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute bottom-2 left-2 right-2 bg-[#0A1C38]/90 text-[#C6A664] text-[10px] font-bold py-1 text-center rounded-lg backdrop-blur-xs border border-[#C6A664]/30">
+                <DoctorAvatar doctor={doctor} />
+                <div className="absolute bottom-2 left-2 right-2 bg-[#0A1C38]/90 text-[#C6A664] text-[10px] font-bold py-1 text-center rounded-lg backdrop-blur-xs border border-[#C6A664]/30 font-arimo">
                   {doctor.cro}
                 </div>
               </div>
 
               {/* Doctor Bio Details */}
-              <div className="space-y-3 text-center md:text-left flex-1">
+              <div className="space-y-3 text-center md:text-left flex-1 font-arimo">
                 <div>
                   <h3 className="font-poppins font-bold text-xl sm:text-2xl text-[#0E2954] group-hover:text-[#C6A664] transition-colors">
                     {doctor.name}
                   </h3>
-                  <p className="text-xs font-semibold text-[#C6A664] uppercase tracking-wider mt-0.5 font-barlow">
+                  <p className="text-xs font-semibold text-[#C6A664] uppercase tracking-wider mt-0.5">
                     {doctor.role}
                   </p>
                 </div>
 
-                <p className="text-xs sm:text-sm text-[#334155] leading-relaxed font-barlow">
+                <p className="text-xs sm:text-sm text-[#334155] leading-relaxed">
                   {doctor.bio}
                 </p>
 

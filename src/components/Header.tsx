@@ -18,6 +18,7 @@ export const Header: React.FC<HeaderProps> = () => {
   }, []);
 
   const navItems = [
+    { label: 'Nossos Cases', href: '#casos' },
     { label: 'Carga Imediata', href: '#carga-imediata' },
     { label: 'Especialistas', href: '#especialistas' },
     { label: 'Serviços', href: '#servicos' },
@@ -29,7 +30,7 @@ export const Header: React.FC<HeaderProps> = () => {
   return (
     <header className="sticky top-0 z-50 transition-all duration-300">
       {/* Top Bar - Brand Dark Navy (#0A1C38) */}
-      <div className="bg-[#0A1C38] text-slate-200 text-xs py-2 px-4 border-b border-[#C6A664]/30">
+      <div className="bg-[#0A1C38] text-slate-200 text-xs py-2 px-4 border-b border-[#C6A664]/30 font-arimo">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
           <div className="flex items-center space-x-6 flex-wrap justify-center">
             <span className="flex items-center gap-1.5 font-medium text-slate-200">
@@ -43,7 +44,7 @@ export const Header: React.FC<HeaderProps> = () => {
           </div>
 
           <div className="flex items-center space-x-4">
-            <span className="inline-flex items-center gap-1 bg-white/10 px-2.5 py-0.5 rounded-full text-[11px] font-medium text-slate-200 border border-[#C6A664]/40">
+            <span className="inline-flex items-center gap-1 bg-white/10 px-2.5 py-0.5 rounded-full text-[11px] font-medium text-slate-200 border border-[#C6A664]/40 font-arimo">
               <ShieldCheck className="w-3 h-3 text-[#C6A664]" />
               ANVISA & CRO {CLINIC_INFO.croClinic}
             </span>
@@ -75,38 +76,37 @@ export const Header: React.FC<HeaderProps> = () => {
               <LogoImage variant="header" />
             </div>
             <div className="flex flex-col">
-              <span className="font-poppins font-light text-xl text-[#0E2954] tracking-[0.2em] uppercase leading-tight group-hover:text-[#C6A664] transition-colors">
+              <span className="font-poppins font-normal text-xl text-[#0E2954] tracking-[0.2em] uppercase leading-tight group-hover:text-[#C6A664] transition-colors">
                 L U B R U
               </span>
-              <span className="text-[10px] tracking-[0.22em] text-[#C6A664] font-semibold uppercase">
+              <span className="text-[10px] tracking-[0.22em] text-[#C6A664] font-semibold uppercase font-arimo">
                 Odontologia Reabilitadora
               </span>
             </div>
           </a>
 
-          {/* Desktop Nav Links */}
-          <div className="hidden lg:flex items-center space-x-7">
+          {/* Desktop Nav Links with spacious spacing */}
+          <div className="hidden lg:flex items-center space-x-8 xl:space-x-9">
             {navItems.map((item) => (
               <a
                 key={item.label}
                 href={item.href}
-                className="text-xs uppercase tracking-widest font-semibold text-[#334155] hover:text-[#0E2954] transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#C6A664] hover:after:w-full after:transition-all"
+                className="text-xs uppercase tracking-widest font-semibold text-[#334155] hover:text-[#0E2954] transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#C6A664] hover:after:w-full after:transition-all font-arimo"
               >
                 {item.label}
               </a>
             ))}
           </div>
 
-          {/* Action CTAs */}
-          <div className="hidden sm:flex items-center gap-3">
+          {/* Action CTAs - Centered text, no icon inside button */}
+          <div className="hidden sm:flex items-center">
             <a
               href={`${CLINIC_INFO.whatsappUrl}?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20com%20especialista%20na%20Lubru%20Odontologia.`}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#0E2954] hover:bg-[#143264] text-white text-xs font-bold uppercase tracking-wider px-5 py-2.5 rounded-full shadow-md hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center gap-2 border border-[#C6A664]/30"
+              className="bg-[#0E2954] hover:bg-[#143264] text-white text-xs font-bold uppercase tracking-wider px-6 py-2.5 rounded-full shadow-md hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] transition-all text-center justify-center inline-flex border border-[#C6A664]/30 font-poppins"
             >
-              <MessageCircle className="w-4 h-4 text-[#C6A664] fill-[#C6A664]/20" />
-              <span>Agende sua Avaliação</span>
+              Agende sua Avaliação
             </a>
           </div>
 
@@ -130,7 +130,7 @@ export const Header: React.FC<HeaderProps> = () => {
                 key={item.label}
                 href={item.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="block text-sm font-medium uppercase tracking-wider text-[#0E2954] hover:text-[#C6A664] py-2 border-b border-slate-100"
+                className="block text-sm font-medium uppercase tracking-wider text-[#0E2954] hover:text-[#C6A664] py-2 border-b border-slate-100 font-arimo"
               >
                 {item.label}
               </a>
@@ -140,10 +140,9 @@ export const Header: React.FC<HeaderProps> = () => {
                 href={`${CLINIC_INFO.whatsappUrl}?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20com%20especialista%20na%20Lubru%20Odontologia.`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full text-center bg-[#0E2954] text-white text-xs font-bold uppercase tracking-wider py-3 rounded-full shadow-md flex items-center justify-center gap-2 border border-[#C6A664]/30 block"
+                className="w-full text-center bg-[#0E2954] text-white text-xs font-bold uppercase tracking-wider py-3 px-4 rounded-full shadow-md border border-[#C6A664]/30 block font-poppins"
               >
-                <MessageCircle className="w-4 h-4 text-[#C6A664]" />
-                <span>Agendar Avaliação pelo WhatsApp</span>
+                Agende sua Avaliação
               </a>
             </div>
           </div>

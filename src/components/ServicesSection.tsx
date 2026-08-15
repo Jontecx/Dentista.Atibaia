@@ -1,6 +1,38 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { SERVICES, CLINIC_INFO } from '../data/clinicData';
 import { MessageCircle, Sparkles, Smile, Zap, Gem, ShieldCheck, HeartPulse, ArrowUpRight } from 'lucide-react';
+import { ServiceItem } from '../types';
+
+const ServiceImage: React.FC<{ service: ServiceItem }> = ({ service }) => {
+  const localPaths = [
+    `/servicos/${service.id}.avif`,
+    `/servicos/${service.id}.AVIF`,
+    `/servicos/${service.id}.webp`,
+    `/servicos/${service.id}.png`,
+    `/servicos/${service.id}.jpg`,
+    `/${service.id}.avif`,
+    `/${service.id}.webp`,
+    `/${service.id}.png`,
+    service.image,
+  ];
+
+  const [index, setIndex] = useState(0);
+
+  const handleError = () => {
+    if (index < localPaths.length - 1) {
+      setIndex((prev) => prev + 1);
+    }
+  };
+
+  return (
+    <img
+      src={localPaths[index]}
+      alt={service.title}
+      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+      onError={handleError}
+    />
+  );
+};
 
 export const ServicesSection: React.FC = () => {
   const getServiceIcon = (iconName: string) => {
@@ -27,14 +59,14 @@ export const ServicesSection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold bg-[#0E2954] text-[#C6A664] border border-[#C6A664]/40 uppercase tracking-wider">
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold bg-[#0E2954] text-[#C6A664] border border-[#C6A664]/40 uppercase tracking-wider font-arimo">
             <Sparkles className="w-3.5 h-3.5 text-[#C6A664]" />
             Nossos Tratamentos de Excelência
           </span>
           <h2 className="font-poppins font-bold text-3xl sm:text-4xl text-[#0E2954] tracking-tight">
-            Odontologia Especializada com <span className="text-[#C6A664]">Foco em Benefícios Reais</span>
+            Conheça os tratamentos que vão <span className="text-[#C6A664]">Transformar seu sorriso</span>
           </h2>
-          <p className="text-base sm:text-lg text-[#334155] font-barlow">
+          <p className="text-base sm:text-lg text-[#334155] font-arimo">
             Soluções completas para reabilitação oral, alinhamento discreto, estética e preservação da saúde bucal com tecnologia de ponta.
           </p>
         </div>
@@ -54,14 +86,10 @@ export const ServicesSection: React.FC = () => {
                 <div>
                   {/* Image Header */}
                   <div className="relative h-48 overflow-hidden">
-                    <img
-                      src={service.image}
-                      alt={service.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
+                    <ServiceImage service={service} />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#0A1C38]/80 via-transparent to-transparent" />
 
-                    <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-md px-3 py-1 rounded-full text-[11px] font-bold text-[#0E2954] border border-[#C6A664]/30">
+                    <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-md px-3 py-1 rounded-full text-[11px] font-bold text-[#0E2954] border border-[#C6A664]/30 font-arimo">
                       {service.category}
                     </div>
 
@@ -78,7 +106,7 @@ export const ServicesSection: React.FC = () => {
                       {service.title}
                     </h3>
 
-                    <p className="text-xs sm:text-sm text-[#334155] leading-relaxed font-barlow">
+                    <p className="text-xs sm:text-sm text-[#334155] leading-relaxed font-arimo">
                       {service.description}
                     </p>
 
@@ -87,7 +115,7 @@ export const ServicesSection: React.FC = () => {
                       <span className="text-[11px] font-bold text-[#C6A664] uppercase tracking-wider block font-poppins">
                         Principais Benefícios:
                       </span>
-                      <ul className="space-y-1.5 font-barlow">
+                      <ul className="space-y-1.5 font-arimo">
                         {service.benefits.map((benefit, i) => (
                           <li key={i} className="flex items-start gap-2 text-xs text-[#1E293B]">
                             <span className="w-4 h-4 rounded-full bg-[#EEF3FA] text-[#0E2954] flex items-center justify-center shrink-0 mt-0.5 text-[10px] font-bold border border-[#0E2954]/20">
@@ -107,7 +135,7 @@ export const ServicesSection: React.FC = () => {
                     href={whatsappServiceUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full bg-[#0E2954] hover:bg-[#143264] text-white font-bold text-xs uppercase tracking-wider py-3.5 px-4 rounded-full shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2 text-center border border-[#C6A664]/30"
+                    className="w-full bg-[#0E2954] hover:bg-[#143264] text-white font-bold text-xs uppercase tracking-wider py-3.5 px-4 rounded-full shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2 text-center border border-[#C6A664]/30 font-poppins"
                   >
                     <MessageCircle className="w-4 h-4 text-[#C6A664]" />
                     <span>Consultar via WhatsApp</span>
@@ -124,7 +152,7 @@ export const ServicesSection: React.FC = () => {
             <h3 className="font-poppins font-bold text-xl text-[#0E2954]">
               Dúvidas sobre qual tratamento é o mais indicado para você?
             </h3>
-            <p className="text-sm text-[#334155] font-barlow">
+            <p className="text-sm text-[#334155] font-arimo">
               Realizamos um diagnóstico inicial minucioso e personalizado no consultório ou via pré-avaliação no WhatsApp.
             </p>
           </div>

@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
 
 const LOGO_PATHS = [
-  '/logo.png',
-  '/logo.webp',
-  '/logo.wep',
-  '/logo.jpeg',
-  '/logo.jpg',
   '/logo.avif',
-  '/logo.svg',
-  '/logo.PNG',
-  '/logo.JPEG',
-  '/logo.JPG',
-  '/logo.WEBP',
   '/logo.AVIF',
+  '/logo.webp',
+  '/logo.WEBP',
+  '/logo.png',
+  '/logo.PNG',
+  '/logo.svg',
+  '/logo.SVG',
+  '/logo.jpeg',
+  '/logo.JPEG',
+  '/logo.jpg',
+  '/logo.JPG',
 ];
 
 interface LogoImageProps {

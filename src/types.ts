@@ -52,3 +52,17 @@ export interface StepProtocol {
   highlight: string;
   duration: string;
 }
+
+export interface ClinicalCase {
+  id: string;
+  title: string;
+  category: string;
+  description: string;
+  beforeImage: string;
+  afterImage: string;
+  localBeforePath?: string;
+  localAfterPath?: string;
+  localCombinedPath?: string;
+  timeframe?: string;
+  tags?: string[];
+}

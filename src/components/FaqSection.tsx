@@ -21,7 +21,7 @@ export const FaqSection: React.FC = () => {
           <h2 className="font-poppins font-bold text-3xl sm:text-4xl text-[#0E2954] tracking-tight">
             Perguntas Frequentes sobre a <span className="text-[#C6A664]">Lubru Odontologia</span>
           </h2>
-          <p className="text-base text-[#334155] font-barlow">
+          <p className="text-base text-[#334155] font-arimo">
             Respostas claras e transparentes para você tomar sua decisão de tratamento com total segurança.
           </p>
         </div>
@@ -63,7 +63,7 @@ export const FaqSection: React.FC = () => {
                 </button>
 
                 {isOpen && (
-                  <div className="px-5 pb-6 sm:px-6 pt-0 text-xs sm:text-sm text-[#334155] leading-relaxed border-t border-slate-200 mt-1 animate-in fade-in font-barlow">
+                  <div className="px-5 pb-6 sm:px-6 pt-0 text-xs sm:text-sm text-[#334155] leading-relaxed border-t border-slate-200 mt-1 animate-in fade-in font-arimo">
                     <p className="pt-3">{faq.answer}</p>
                   </div>
                 )}

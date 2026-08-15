@@ -47,21 +47,17 @@ export const TestimonialsSection: React.FC = () => {
                   </span>
                 </div>
 
-                <p className="text-xs sm:text-sm text-[#334155] leading-relaxed italic relative pl-4 border-l-2 border-[#C6A664] font-barlow">
+                <p className="text-xs sm:text-sm text-[#334155] leading-relaxed italic relative pl-4 border-l-2 border-[#C6A664] font-arimo">
                   "{t.comment}"
                 </p>
               </div>
 
-              <div className="pt-3 border-t border-slate-200 flex items-center justify-between text-xs">
+              <div className="pt-3 border-t border-slate-200 flex items-center justify-between">
                 <div>
-                  <strong className="font-poppins font-semibold text-[#0E2954] block">
+                  <strong className="font-poppins font-semibold text-sm sm:text-base text-[#0E2954] block">
                     {t.author}
                   </strong>
-                  <span className="text-[#64748B] text-[11px] font-barlow">
-                    {t.location} &bull; Tratamento: <span className="text-[#C6A664] font-medium">{t.treatment}</span>
-                  </span>
                 </div>
-                <span className="text-[10px] text-slate-400">{t.date}</span>
               </div>
             </div>
           ))}
@@ -72,7 +68,7 @@ export const TestimonialsSection: React.FC = () => {
           <h3 className="font-poppins font-bold text-xl text-[#0E2954]">
             Não encontrou a resposta para a sua dúvida?
           </h3>
-          <p className="text-xs sm:text-sm text-[#334155] max-w-lg mx-auto font-barlow">
+          <p className="text-xs sm:text-sm text-[#334155] max-w-lg mx-auto font-arimo">
             Nossa equipe de atendimento no WhatsApp está à disposição para esclarecer qualquer aspecto técnico ou agendar seu horário com o Dr. Lucas e Dra. Bruna.
           </p>
 

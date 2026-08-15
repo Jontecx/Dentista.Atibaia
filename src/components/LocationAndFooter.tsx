@@ -16,29 +16,29 @@ export const LocationAndFooter: React.FC = () => {
             <div className="space-y-2">
               <div className="flex items-center gap-3">
                 <div className="relative flex items-center justify-center">
-                  <LogoImage variant="footer" className="h-11 w-auto object-contain max-w-[180px]" />
+                  <LogoImage variant="footer" className="h-11 w-auto object-contain max-w-[180px] brightness-0 invert" />
                 </div>
                 <div>
-                  <h3 className="font-poppins font-bold text-2xl text-white tracking-tight">
-                    LUBRU <span className="text-[#C6A664]">ODONTOLOGIA</span>
+                  <h3 className="font-poppins font-normal text-2xl text-white tracking-tight">
+                    LUBRU <span className="text-[#C6A664] font-bold">ODONTOLOGIA</span>
                   </h3>
-                  <p className="text-xs text-[#C6A664] font-barlow tracking-wider">Atibaia / SP &bull; Odontologia Reabilitadora</p>
+                  <p className="text-xs text-[#C6A664] font-arimo tracking-wider">Atibaia / SP &bull; Odontologia Reabilitadora</p>
                 </div>
               </div>
             </div>
 
-            <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-barlow">
+            <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-arimo">
               Localização privilegiada no Centro de Atibaia com estrutura acessível, ambiente climatizado e biossegurança rigorosa para o seu conforto.
             </p>
 
-            <div className="space-y-4 pt-2">
+            <div className="space-y-4 pt-2 font-arimo">
               <div className="flex items-start gap-3">
                 <div className="w-8 h-8 rounded-lg bg-[#0E2954] text-[#C6A664] flex items-center justify-center shrink-0 mt-1 border border-[#C6A664]/30">
                   <MapPin className="w-4 h-4" />
                 </div>
                 <div>
                   <strong className="text-white text-xs block uppercase font-semibold font-poppins">Endereço</strong>
-                  <span className="text-xs text-slate-300 font-barlow">{CLINIC_INFO.address}</span>
+                  <span className="text-xs text-slate-300">{CLINIC_INFO.address}</span>
                 </div>
               </div>
 
@@ -52,7 +52,7 @@ export const LocationAndFooter: React.FC = () => {
                     href={`${CLINIC_INFO.whatsappUrl}?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20na%20Lubru%20Odontologia.`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-xs text-[#C6A664] hover:underline font-bold font-barlow"
+                    className="text-xs text-[#C6A664] hover:underline font-bold"
                   >
                     {CLINIC_INFO.phone}
                   </a>
@@ -65,7 +65,7 @@ export const LocationAndFooter: React.FC = () => {
                 </div>
                 <div>
                   <strong className="text-white text-xs block uppercase font-semibold font-poppins">Horário de Atendimento</strong>
-                  <span className="text-xs text-slate-300 font-barlow">{CLINIC_INFO.hours}</span>
+                  <span className="text-xs text-slate-300">{CLINIC_INFO.hours}</span>
                 </div>
               </div>
 
@@ -75,7 +75,7 @@ export const LocationAndFooter: React.FC = () => {
                 </div>
                 <div>
                   <strong className="text-white text-xs block uppercase font-semibold font-poppins">Estacionamento & Acesso</strong>
-                  <span className="text-xs text-slate-300 font-barlow">Fácil estacionamento no Centro e acesso com total acessibilidade.</span>
+                  <span className="text-xs text-slate-300">Fácil estacionamento no Centro e acesso com total acessibilidade.</span>
                 </div>
               </div>
             </div>
@@ -105,7 +105,7 @@ export const LocationAndFooter: React.FC = () => {
               referrerPolicy="no-referrer-when-downgrade"
             />
             <div className="absolute bottom-6 left-6 right-6 bg-[#0A1C38]/95 backdrop-blur-md p-3.5 rounded-xl border border-[#C6A664]/30 flex items-center justify-between text-xs text-slate-200">
-              <span className="flex items-center gap-2 font-barlow">
+              <span className="flex items-center gap-2 font-arimo">
                 <Navigation className="w-4 h-4 text-[#C6A664]" /> Av. Brig. José Vicente Faria Lima, 38 - Centro, Atibaia
               </span>
               <a
@@ -133,23 +133,23 @@ export const LocationAndFooter: React.FC = () => {
             <div>
               <strong className="text-white block font-poppins">Dr. Lucas Cavalcante Pracchia</strong>
               <span className="text-[#C6A664] font-mono text-[11px]">CROSP 141.155</span>
-              <p className="text-[11px] text-slate-300 mt-0.5 font-barlow">Especialista em Implantodontia & Reabilitação Oral</p>
+              <p className="text-[11px] text-slate-300 mt-0.5 font-arimo">Especialista em Implantodontia & Reabilitação Oral</p>
             </div>
 
             <div>
               <strong className="text-white block font-poppins">Dra. Bruna Soares Diodatti Pracchia</strong>
               <span className="text-[#C6A664] font-mono text-[11px]">CROSP 139.987</span>
-              <p className="text-[11px] text-slate-300 mt-0.5 font-barlow">Especialista em Estética Dental & Ortodontia</p>
+              <p className="text-[11px] text-slate-300 mt-0.5 font-arimo">Especialista em Estética Dental & Ortodontia</p>
             </div>
           </div>
 
-          <p className="text-[11px] text-slate-400 leading-relaxed pt-2 border-t border-slate-700/80 font-barlow">
+          <p className="text-[11px] text-slate-400 leading-relaxed pt-2 border-t border-slate-700/80 font-arimo">
             * Aviso Ético: As informações contidas neste site possuem caráter educativo e informativo. Os resultados de tratamentos odontológicos podem variar conforme as características biológicas e anatômicas individuais de cada paciente. Não prometemos diagnósticos virtuais nem garantias absolutas. A indicação do tratamento é estabelecida após consulta clínica presencial.
           </p>
         </div>
 
         {/* Bottom Copyright */}
-        <div className="flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-4 pt-4 border-t border-slate-800 font-barlow">
+        <div className="flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-4 pt-4 border-t border-slate-800 font-arimo">
           <p>© {new Date().getFullYear()} Lubru Odontologia. Todos os direitos reservados.</p>
           <div className="flex items-center space-x-4">
             <span>Atibaia - SP</span>
