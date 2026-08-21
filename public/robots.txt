@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Allow: /clinica
+
+# Bloqueia recursos desnecessários para o rastreador
+Disallow: /assets/
+Disallow: /*.map$
+
+# Sitemap
+Sitemap: https://lubruodontologia.com.br/sitemap.xml
