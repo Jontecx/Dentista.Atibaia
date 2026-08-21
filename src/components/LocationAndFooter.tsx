@@ -28,7 +28,7 @@ export const LocationAndFooter: React.FC = () => {
             </div>
 
             <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-arimo">
-              Localização privilegiada no Centro de Atibaia com estrutura acessível, ambiente climatizado e biossegurança rigorosa para o seu conforto.
+              Localização privilegiada no Centro de Atibaia com completa estrutura, ambiente climatizado e biossegurança rigorosa para o seu conforto.
             </p>
 
             {/* NAP semântico para SEO local */}

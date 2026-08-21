@@ -27,9 +27,9 @@ export const DOCTORS: Doctor[] = [
   {
     name: 'Dra. Bruna Soares Diodatti Pracchia',
     cro: 'CROSP 139.987',
-    role: 'Especialista em Estética Dental, Ortodontia & Harmonização do Sorriso',
+    role: 'Especialista em Ortodontia & Preventiva',
     specialties: ['Lentes de Contato Dentais', 'Alinhadores Invisíveis', 'Odontologia Preventiva e Integrativa'],
-    bio: 'Pioneira em Odontologia Estética com visão integrativa. Focada no alinhamento discreto, facetas cerâmicas de acabamento natural e na preservação da saúde sistêmica a partir de um diagnóstico bucal minucioso.',
+    bio: 'Especialista em Ortodontia com visão integrativa. Focada na resolução de mordidas leves a complexas por meio de alinhadores invisíveis e aparelhos estéticos, garantindo o alinhamento perfeito e a preservação da saúde sistêmica a partir de um diagnóstico bucal minucioso.',
     image: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=800&q=80',
   },
 ];
@@ -52,14 +52,14 @@ export const CARGA_IMEDIATA_STEPS: StepProtocol[] = [
   {
     step: 3,
     title: 'Fixação dos Dentes no Mesmo Dia',
-    description: 'Instalação da prótese fixa provisória de alta resistência. O paciente entra no consultório e sai no mesmo dia com dentes fixos, sorrindo e mastigando com segurança.',
+    description: 'Instalação da prótese fixa de alta resistência. O paciente entra no consultório e sai no mesmo dia com dentes fixos, sorrindo e mastigando com segurança.',
     highlight: 'Transformação imediata',
     duration: 'No mesmo dia',
   },
   {
     step: 4,
     title: 'Acompanhamento & Instalação Final',
-    description: 'Após a osteointegratação completa, ajustamos os detalhes estéticos finais da prótese em cerâmica para garantir brilho, textura e mastigação perfeita.',
+    description: 'Após a osteointegratação completa, ajustamos os detalhes estéticos finais da prótese para garantir brilho, textura e mastigação perfeita.',
     highlight: 'Segurança e alta durabilidade',
     duration: 'Acompanhamento contínuo',
   },
@@ -259,7 +259,7 @@ export const FAQS: FaqItem[] = [
   {
     category: 'Atendimento',
     question: 'Realmente é possível sair da clínica com dentes fixos no mesmo dia?',
-    answer: 'Sim! Com o protocolo de Carga Imediata, os 4 implantes são posicionados estrategicamente e recebem uma prótese provisória parafusada e estável em até 24 horas após a cirurgia, permitindo que você sorria e se alimente com conforto imediato.',
+    answer: 'Sim! Com o protocolo de Carga Imediata, os 4 implantes são posicionados estrategicamente e recebem uma prótese parafusada e estável em até 24 horas após a cirurgia, permitindo que você sorria e se alimente com conforto imediato.',
   },
   {
     category: 'Convênios',
