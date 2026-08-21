@@ -74,7 +74,7 @@ export const TestimonialsSection: React.FC = () => {
 
           <a
             href={`${CLINIC_INFO.whatsappUrl}?text=${encodeURIComponent(
-              'Olá! Tenho uma dúvida específica e gostaria de falar com a equipe de atendimento da Lubru Odontologia.'
+              'Olá! Vim pelo Google e tenho dúvidas. Gostaria de falar com a equipe da Lubru Odontologia em Atibaia. [src:google|mid:cpc|cmp:geral-atibaia|trm:dentista-atibaia]'
             )}`}
             target="_blank"
             rel="noopener noreferrer"

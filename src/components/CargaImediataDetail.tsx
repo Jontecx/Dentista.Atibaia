@@ -6,7 +6,7 @@ export const CargaImediataDetail: React.FC = () => {
   const [activeStep, setActiveStep] = useState(0);
 
   const whatsappStepUrl = `${CLINIC_INFO.whatsappUrl}?text=${encodeURIComponent(
-    'Olá! Li sobre o Protocolo de Carga Imediata (4 Pinos) e gostaria de agendar uma consulta para avaliar meu caso.'
+    'Olá! Vim pelo Google e li sobre o Protocolo de Carga Imediata (4 Pinos). Gostaria de agendar uma avaliação para o meu caso. [src:google|mid:cpc|cmp:carga-imediata-atibaia|trm:all-on-4]'
   )}`;
 
   return (

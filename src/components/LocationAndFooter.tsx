@@ -16,7 +16,7 @@ export const LocationAndFooter: React.FC = () => {
             <div className="space-y-2">
               <div className="flex items-center gap-3">
                 <div className="relative flex items-center justify-center">
-                  <LogoImage variant="footer" className="h-11 w-auto object-contain max-w-[180px] brightness-0 invert" />
+                  <LogoImage variant="footer" className="h-11 w-auto object-contain max-w-[180px] rounded-sm" />
                 </div>
                 <div>
                   <h3 className="font-poppins font-normal text-2xl text-white tracking-tight">
@@ -31,7 +31,8 @@ export const LocationAndFooter: React.FC = () => {
               Localização privilegiada no Centro de Atibaia com estrutura acessível, ambiente climatizado e biossegurança rigorosa para o seu conforto.
             </p>
 
-            <div className="space-y-4 pt-2 font-arimo">
+            {/* NAP semântico para SEO local */}
+            <address className="not-italic space-y-4 pt-2 font-arimo">
               <div className="flex items-start gap-3">
                 <div className="w-8 h-8 rounded-lg bg-[#0E2954] text-[#C6A664] flex items-center justify-center shrink-0 mt-1 border border-[#C6A664]/30">
                   <MapPin className="w-4 h-4" />
@@ -49,7 +50,7 @@ export const LocationAndFooter: React.FC = () => {
                 <div>
                   <strong className="text-white text-xs block uppercase font-semibold font-poppins">WhatsApp & Telefone</strong>
                   <a
-                    href={`${CLINIC_INFO.whatsappUrl}?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20na%20Lubru%20Odontologia.`}
+                    href={`${CLINIC_INFO.whatsappUrl}?text=Ol%C3%A1!%20Vim%20pelo%20Google%20e%20gostaria%20de%20agendar%20uma%20consulta%20na%20Lubru%20Odontologia.%20%5Bsrc%3Agoogle%7Cmid%3Acpc%7Ccmp%3Ageral-atibaia%7Ctrm%3Adentista-atibaia%5D`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-xs text-[#C6A664] hover:underline font-bold"
@@ -78,12 +79,12 @@ export const LocationAndFooter: React.FC = () => {
                   <span className="text-xs text-slate-300">Fácil estacionamento no Centro e acesso com total acessibilidade.</span>
                 </div>
               </div>
-            </div>
+            </address>
 
             <div className="pt-2">
               <a
                 href={`${CLINIC_INFO.whatsappUrl}?text=${encodeURIComponent(
-                  'Olá! Gostaria de obter as orientações de como chegar à Lubru Odontologia em Atibaia.'
+                  'Olá! Vim pelo Google e gostaria de orientações de como chegar à Lubru Odontologia em Atibaia. [src:google|mid:cpc|cmp:localizacao-atibaia|trm:dentista-no-centro]'
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -94,6 +95,7 @@ export const LocationAndFooter: React.FC = () => {
               </a>
             </div>
           </div>
+
 
           {/* Map Embed Container - 7 cols */}
           <div className="lg:col-span-7 bg-[#0E2954] rounded-3xl p-3 border border-[#C6A664]/30 shadow-xl overflow-hidden relative min-h-[340px]">

@@ -98,7 +98,7 @@ export const DifferentialsSection: React.FC = () => {
 
             <a
               href={`${CLINIC_INFO.whatsappUrl}?text=${encodeURIComponent(
-                'Olá! Gostaria de agendar uma consulta na Lubru Odontologia.'
+                'Olá! Vim pelo Google e gostaria de agendar uma consulta na Lubru Odontologia em Atibaia. [src:google|mid:cpc|cmp:geral-atibaia|trm:dentista-atibaia]'
               )}`}
               target="_blank"
               rel="noopener noreferrer"

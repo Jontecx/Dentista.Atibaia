@@ -1,34 +1,64 @@
 import React, { useState } from 'react';
 import { MessageCircle, X, ShieldCheck, ChevronRight } from 'lucide-react';
 import { CLINIC_INFO } from '../data/clinicData';
+import { useNavigation } from '../context/NavigationContext';
 
-interface FloatingWhatsAppProps {}
-
-export const FloatingWhatsApp: React.FC<FloatingWhatsAppProps> = () => {
+export const FloatingWhatsApp: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { currentPage } = useNavigation();
 
-  const quickOptions = [
+  const protocoloOptions = [
     {
-      title: 'Protocolo de Carga Imediata',
+      title: 'Protocolo Carga Imediata',
       subtitle: 'Dentes fixos em até 24h em Atibaia',
-      msg: 'Olá! Gostaria de agendar uma consulta para o Protocolo de Carga Imediata.',
+      msg: 'Olá! Vim pelo Google e gostaria de agendar uma avaliação para o Protocolo de Carga Imediata (All-on-4) na Lubru Odontologia em Atibaia. [src:google|mid:cpc|cmp:carga-imediata-atibaia|trm:carga-imediata]',
     },
     {
-      title: 'Lentes & Estética Dental',
-      subtitle: 'Transformação natural do sorriso',
-      msg: 'Olá! Tenho interesse em Lentes de Contato e Estética Dental.',
-    },
-    {
-      title: 'Alinhadores Invisíveis',
-      subtitle: 'Ortodontia discreta e moderna',
-      msg: 'Olá! Gostaria de informações sobre Alinhadores Invisíveis.',
+      title: 'Cirurgia Guiada 3D',
+      subtitle: 'Implantes sem enxertos na maioria dos casos',
+      msg: 'Olá! Vim pelo Google e gostaria de saber mais sobre Implante Dentário com Cirurgia Guiada 3D na Lubru Odontologia em Atibaia. [src:google|mid:cpc|cmp:implante-atibaia|trm:implante]',
     },
     {
       title: 'Documentação para Reembolso',
       subtitle: 'Apoio completo para seu plano',
-      msg: 'Olá! Gostaria de orientações sobre a documentação para solicitação de reembolso no meu convênio.',
+      msg: 'Olá! Vim pelo Google e gostaria de orientações sobre a documentação para solicitação de reembolso do meu convênio na Lubru Odontologia. [src:google|mid:cpc|cmp:reembolso-atibaia|trm:reembolso]',
+    },
+    {
+      title: 'Falar com Atendimento',
+      subtitle: 'Tire suas dúvidas gerais',
+      msg: 'Olá! Vim pelo Google e gostaria de tirar dúvidas com a equipe da Lubru Odontologia em Atibaia. [src:google|mid:cpc|cmp:geral-atibaia|trm:dentista-atibaia]',
     },
   ];
+
+  const clinicaOptions = [
+    {
+      title: 'Aparelho Invisível',
+      subtitle: 'Alinhamento discreto e tecnológico',
+      msg: 'Olá! Vim pelo Google e gostaria de agendar uma avaliação para aparelho invisível / alinhadores na Lubru Odontologia em Atibaia. [src:google|mid:cpc|cmp:ortodontia-atibaia|trm:alinhadores]',
+    },
+    {
+      title: 'Tratamento de Canal (1 Sessão)',
+      subtitle: 'Resolve a dor rápido, sem sofrimento',
+      msg: 'Olá! Vim pelo Google e estou com dor de dente. Gostaria de fazer o tratamento de canal na Lubru Odontologia em Atibaia. [src:google|mid:cpc|cmp:canal-atibaia|trm:canal]',
+    },
+    {
+      title: 'Clareamento & Facetas Dentais',
+      subtitle: 'Clareamento dental e sorriso perfeito',
+      msg: 'Olá! Vim pelo Google e gostaria de saber sobre clareamento dental e facetas na Lubru Odontologia em Atibaia. [src:google|mid:cpc|cmp:estetica-atibaia|trm:clareamento]',
+    },
+    {
+      title: 'Bruxismo & Limpeza Dental',
+      subtitle: 'Ranger dentes e saúde bucal preventiva',
+      msg: 'Olá! Vim pelo Google e gostaria de agendar uma consulta sobre bruxismo (ranger dentes) e limpeza dental na Lubru Odontologia em Atibaia. [src:google|mid:cpc|cmp:preventiva-atibaia|trm:bruxismo]',
+    },
+    {
+      title: 'Documentação para Reembolso',
+      subtitle: 'Apoio completo para seu plano',
+      msg: 'Olá! Vim pelo Google e gostaria de orientações sobre a documentação para solicitação de reembolso na Lubru Odontologia. [src:google|mid:cpc|cmp:reembolso-atibaia|trm:reembolso]',
+    },
+  ];
+
+  const quickOptions = currentPage === 'protocolo' ? protocoloOptions : clinicaOptions;
 
   return (
     <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end pointer-events-auto">
@@ -53,7 +83,7 @@ export const FloatingWhatsApp: React.FC<FloatingWhatsAppProps> = () => {
               <div>
                 <h4 className="font-poppins font-bold text-sm text-white">Lubru Odontologia</h4>
                 <p className="text-[11px] text-[#C6A664] font-medium font-barlow flex items-center gap-1">
-                  Atendimento Online no WhatsApp &bull; Atibaia
+                  Atendimento Online &bull; Atibaia/SP
                 </p>
               </div>
             </div>

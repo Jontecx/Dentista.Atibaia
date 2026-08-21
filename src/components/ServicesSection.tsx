@@ -27,7 +27,9 @@ const ServiceImage: React.FC<{ service: ServiceItem }> = ({ service }) => {
   return (
     <img
       src={localPaths[index]}
-      alt={service.title}
+      alt={`${service.title} em Atibaia — Lubru Odontologia`}
+      width={400}
+      height={300}
       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
       onError={handleError}
     />
@@ -159,7 +161,7 @@ export const ServicesSection: React.FC = () => {
 
           <a
             href={`${CLINIC_INFO.whatsappUrl}?text=${encodeURIComponent(
-              'Olá! Gostaria de passar por uma orientação personalizada para entender qual tratamento é o mais adequado para o meu sorriso.'
+              'Olá! Vim pelo Google e gostaria de uma orientação personalizada para entender qual tratamento é o mais adequado para o meu sorriso. [src:google|mid:cpc|cmp:geral-atibaia|trm:dentista-atibaia]'
             )}`}
             target="_blank"
             rel="noopener noreferrer"
