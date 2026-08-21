@@ -78,7 +78,7 @@ export const SERVICES: ServiceItem[] = [
       'Parece e funciona igual ao dente natural',
     ],
     iconName: 'Sparkles',
-    image: 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=800&q=80',
+    image: '/servico-implante.jpg',
     whatsappMessage: 'Olá! Vim pelo Google e gostaria de saber mais sobre Implante Dentário e dentes fixos na Lubru Odontologia em Atibaia. [src:google|mid:cpc|cmp:implante-atibaia|trm:implante]',
   },
   {
@@ -93,7 +93,7 @@ export const SERVICES: ServiceItem[] = [
       'Resultado previsível em planejamento 3D',
     ],
     iconName: 'Smile',
-    image: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=800&q=80',
+    image: '/servico-ortodontia.jpg',
     whatsappMessage: 'Olá! Vim pelo Google e gostaria de saber mais sobre aparelho invisível e alinhadores na Lubru Odontologia em Atibaia. [src:google|mid:cpc|cmp:ortodontia-atibaia|trm:alinhadores]',
   },
   {
@@ -108,7 +108,7 @@ export const SERVICES: ServiceItem[] = [
       'Tecnologia computadorizada de alta precisão',
     ],
     iconName: 'Zap',
-    image: 'https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=800&q=80',
+    image: '/servico-endodontia.jpg',
     whatsappMessage: 'Olá! Vim pelo Google e estou com dor de dente. Gostaria de fazer o tratamento de canal na Lubru Odontologia em Atibaia. [src:google|mid:cpc|cmp:canal-atibaia|trm:canal]',
   },
   {
@@ -123,7 +123,7 @@ export const SERVICES: ServiceItem[] = [
       'Design digital do sorriso antes de começar',
     ],
     iconName: 'Gem',
-    image: 'https://images.unsplash.com/photo-1571772996211-2f02c9727629?auto=format&fit=crop&w=800&q=80',
+    image: '/servico-estetica.jpg',
     whatsappMessage: 'Olá! Vim pelo Google e gostaria de saber sobre clareamento dental, facetas e lentes de contato na Lubru Odontologia em Atibaia. [src:google|mid:cpc|cmp:estetica-atibaia|trm:clareamento]',
   },
   {
@@ -138,7 +138,7 @@ export const SERVICES: ServiceItem[] = [
       'Durabilidade de longo prazo comprovada',
     ],
     iconName: 'ShieldCheck',
-    image: 'https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=800&q=80',
+    image: '/servico-protese.jpg',
     whatsappMessage: 'Olá! Vim pelo Google e gostaria de informações sobre prótese dental e restauração na Lubru Odontologia em Atibaia. [src:google|mid:cpc|cmp:protese-atibaia|trm:protese]',
   },
   {
@@ -153,7 +153,7 @@ export const SERVICES: ServiceItem[] = [
       'Cirurgias bucais com máximo conforto',
     ],
     iconName: 'HeartPulse',
-    image: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80',
+    image: '/servico-preventiva.jpg',
     whatsappMessage: 'Olá! Vim pelo Google e gostaria de agendar uma limpeza dental ou consulta sobre bruxismo / ranger dentes na Lubru Odontologia em Atibaia. [src:google|mid:cpc|cmp:preventiva-atibaia|trm:bruxismo]',
   },
 ];

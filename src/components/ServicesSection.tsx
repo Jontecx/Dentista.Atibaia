@@ -4,15 +4,17 @@ import { MessageCircle, Sparkles, Smile, Zap, Gem, ShieldCheck, HeartPulse, Arro
 import { ServiceItem } from '../types';
 
 const ServiceImage: React.FC<{ service: ServiceItem }> = ({ service }) => {
+  // Pega o caminho base (ex: /servico-implante) para testar todas as extensões
+  const basePath = service.image.split('.')[0];
+  
   const localPaths = [
-    `/servicos/${service.id}.avif`,
-    `/servicos/${service.id}.AVIF`,
-    `/servicos/${service.id}.webp`,
-    `/servicos/${service.id}.png`,
-    `/servicos/${service.id}.jpg`,
-    `/${service.id}.avif`,
-    `/${service.id}.webp`,
-    `/${service.id}.png`,
+    `${basePath}.avif`,
+    `${basePath}.AVIF`,
+    `${basePath}.webp`,
+    `${basePath}.png`,
+    `${basePath}.jpeg`,
+    `${basePath}.JPEG`,
+    `${basePath}.jpg`,
     service.image,
   ];
 

@@ -7,6 +7,8 @@ const HERO_IMAGE_PATHS = [
   '/hero.AVIF',
   '/hero.webp',
   '/hero.png',
+  '/hero.jpeg',
+  '/hero.JPEG',
   '/hero.jpg',
   '/clinica.avif',
   '/clinica.webp',
@@ -15,7 +17,7 @@ const HERO_IMAGE_PATHS = [
   'https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1000&q=80',
 ];
 
-interface HeroProps {}
+interface HeroProps { }
 
 export const Hero: React.FC<HeroProps> = () => {
   const [heroImgIndex, setHeroImgIndex] = useState(0);
@@ -97,21 +99,8 @@ export const Hero: React.FC<HeroProps> = () => {
               </div>
             </div>
 
-            {/* Call to Action Buttons - Matches client manual button style */}
-            <div className="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-              <a
-                href={whatsappHeroUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full sm:w-auto bg-[#0E2954] hover:bg-[#143264] text-white font-poppins font-bold text-sm sm:text-base px-8 py-4 rounded-full shadow-lg shadow-[#0E2954]/20 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-3 group text-center uppercase tracking-wider border border-[#C6A664]/40"
-              >
-                <MessageCircle className="w-6 h-6 text-[#C6A664] shrink-0 group-hover:rotate-12 transition-transform" />
-                <span>Dentes Fixos em 24 horas &bull; Conheça o Protocolo de Carga Imediata</span>
-              </a>
-            </div>
-
             {/* Fast Micro-Trust Info */}
-            <div className="pt-2 flex flex-wrap items-center justify-center lg:justify-start gap-y-2 gap-x-6 text-xs text-[#64748B] font-medium font-arimo">
+            <div className="pt-2 pb-4 flex flex-wrap items-center justify-center lg:justify-start lg:ml-6 gap-y-2 gap-x-6 text-xs text-[#64748B] font-medium font-arimo">
               <span className="flex items-center gap-1.5">
                 <Clock className="w-4 h-4 text-[#C6A664]" /> Resposta rápida no WhatsApp
               </span>
@@ -121,6 +110,21 @@ export const Hero: React.FC<HeroProps> = () => {
               <span className="flex items-center gap-1.5">
                 <Award className="w-4 h-4 text-[#C6A664]" /> Documentação para Reembolso
               </span>
+            </div>
+
+            {/* Call to Action Buttons - Matches client manual button style */}
+            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start lg:ml-6">
+              <a
+                href={whatsappHeroUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto bg-[#0E2954] hover:bg-[#143264] text-white font-poppins font-bold text-sm sm:text-base px-8 py-4 rounded-full shadow-xl shadow-[#0E2954]/20 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-3 group border border-[#C6A664]/40"
+              >
+                <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6 text-[#C6A664] shrink-0 group-hover:rotate-12 transition-transform" />
+                <span className="uppercase tracking-wider text-center leading-none pt-0.5">
+                  Dentes Fixos em 24 horas <span className="hidden sm:inline">&bull;</span> Conheça o Protocolo
+                </span>
+              </a>
             </div>
           </div>
 
@@ -132,75 +136,23 @@ export const Hero: React.FC<HeroProps> = () => {
 
               {/* Card Body */}
               <div className="relative bg-white rounded-2xl overflow-hidden shadow-xl border border-slate-200">
-                <div className="relative h-72 sm:h-80 overflow-hidden group">
+                <div className="relative w-full overflow-hidden group bg-white">
                   <img
                     src={HERO_IMAGE_PATHS[heroImgIndex]}
-                    alt="Implante Dentário em Atibaia — Clínica Lubru Odontologia, Protocolo de Carga Imediata All-on-4"
-                    width={600}
-                    height={400}
-                    className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                    alt="Dr. Lucas e Dra. Bruna — Lubru Odontologia"
+                    className="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-700"
                     onError={handleHeroImgError}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0A1C38]/90 via-transparent to-transparent" />
-
-                  {/* Badge Overlay */}
-                  <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-full text-xs font-bold text-[#0E2954] shadow-md border border-[#C6A664]/40 flex items-center gap-1.5 font-arimo">
-                    <Sparkles className="w-3.5 h-3.5 text-[#C6A664]" />
-                    Tecnologia Guiada 3D
-                  </div>
-
-                  <div className="absolute bottom-4 left-4 right-4 text-white">
-                    <p className="text-xs uppercase tracking-wider text-[#C6A664] font-semibold font-arimo">
-                      Atibaia / SP &bull; Centro
-                    </p>
-                    <h3 className="font-poppins font-bold text-lg leading-snug">
-                      Lubru Odontologia Reabilitadora
-                    </h3>
-                    <p className="text-xs text-slate-200 font-arimo">
-                      Dr. Lucas Cavalcante Pracchia e Dra. Bruna Soares Diodatti Pracchia
-                    </p>
-                  </div>
                 </div>
 
-                {/* Card Features List */}
-                <div className="p-5 bg-[#F4F7FA] space-y-3">
-                  <div className="grid grid-cols-2 gap-3 text-center">
-                    <div className="bg-white p-3 rounded-xl border border-slate-200">
-                      <span className="block font-poppins font-bold text-xl text-[#0E2954]">
-                        {CLINIC_INFO.transformedSmiles}
-                      </span>
-                      <span className="text-[11px] text-[#64748B] font-medium leading-tight block mt-0.5 font-arimo">
-                        Sorrisos Transformados
-                      </span>
-                    </div>
-
-                    <div className="bg-white p-3 rounded-xl border border-slate-200">
-                      <span className="block font-poppins font-bold text-xl text-[#0E2954] flex items-center justify-center gap-1">
-                        5.0 <Star className="w-4 h-4 fill-amber-400 text-amber-400" />
-                      </span>
-                      <span className="text-[11px] text-[#64748B] font-medium leading-tight block mt-0.5 font-arimo">
-                        Avaliação no Google
-                      </span>
-                    </div>
-                  </div>
-
-                  {/* Micro Quote */}
-                  <div className="bg-[#EEF3FA] p-3 rounded-xl border border-[#0E2954]/10 text-xs text-[#1E293B] italic flex items-start gap-2 font-arimo">
-                    <span className="text-[#C6A664] font-bold text-base leading-none">“</span>
-                    <span>
-                      "Saí da cirurgia de manhã e à tarde já estava com meus novos dentes fixos. Sem dor e com um atendimento humano impecável!"
-                    </span>
-                  </div>
-
-                  <a
-                    href={whatsappHeroUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full bg-[#0E2954] hover:bg-[#143264] text-white font-semibold text-xs py-3 rounded-full transition-all text-center flex items-center justify-center gap-2 shadow-md uppercase tracking-wider border border-[#C6A664]/30 font-poppins"
-                  >
-                    <span>Falar no WhatsApp da Lubru</span>
-                    <ArrowRight className="w-4 h-4 text-[#C6A664]" />
-                  </a>
+                {/* Banner Azul Marinho sem os stats abaixo */}
+                <div className="px-5 py-4 bg-[#0E2954] text-center border-t border-[#C6A664]/20">
+                  <h3 className="font-poppins font-bold text-white text-lg tracking-wide">
+                    Dra. Bruna & Dr. Lucas
+                  </h3>
+                  <p className="text-xs text-[#C6A664] font-arimo mt-1 uppercase tracking-wider font-semibold">
+                    Diretores Clínicos &bull; Lubru Odontologia
+                  </p>
                 </div>
               </div>
             </div>
